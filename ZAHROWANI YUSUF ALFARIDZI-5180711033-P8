@@ -1,0 +1,35 @@
+#include<iostream>
+
+using namespace std;
+
+double input(string text){
+double nilai;
+cout<<"nilai "<<text<<":";cin>>nilai;
+return nilai;
+}
+
+void grade (double nilai){
+if(nilai>80){cout<<"A";}
+else if(nilai>60){cout<<"B";}
+else if(nilai>40){cout<<"C";}
+else if(nilai>20){cout<<"D";}
+else {cout<<"E";}
+cout<<endl;
+}
+main(){
+    struct mahasiswa{
+    double uts,uas,tugas,absen,nilai;
+    };
+mahasiswa mhs;
+
+mhs.uts=input("uts ");
+
+mhs.uas=input("uas ");
+
+mhs.tugas=input("tugas ");
+
+mhs.absen=input("absen ");
+
+mhs.nilai=(mhs.uts*20/100)+(mhs.uas*30/100)+(mhs.tugas*35/100)+(mhs.absen*15/100);cout<<"nilai akhir :"<<mhs.nilai<<endl;
+grade(mhs.nilai);
+}
